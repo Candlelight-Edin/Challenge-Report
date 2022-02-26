@@ -2,6 +2,25 @@
 % Modelling.
 \section{Modelling}
 
-
+In this section we introduce our mathematical model for this decision problem. There are three components of a optimisation model: the decision variables, the constraints and the objective function.
+\\ \hspace*{\fill} \\
+We use the index $i$ to represent a particular stock. Since we choose $15$ stocks from different sectors, the range of $i$ is from $1$ to $15$. As the client has $\pounds 300,000$ in capital to invest in a portfolio, we have the following constraint:
+\begin{equation*}
+    \sum_{i=1}^{15}x_i \leq 300,000.
+\end{equation*}
+Besides we did not invest more than $15\%$ of the capital in one single stock. Clearly $x_i \geq 0$. Thus we have another constraint:
+\begin{equation*}
+    0 \leq x_i \leq 45,000.
+\end{equation*}
+\\ \hspace*{\fill} \\
+Assume that there are no taxes and transaction costs involved. So our model is as follows:
+$$
+\begin{array}{cl}
+\min & \Bar{r}^{T} x - x^{T} Q x \\
+\text {subject to} & e^{T} x \leq 300,000 \\
+& 0 \leq x_i \leq 45,000 
+\end{array}
+$$
+where $x$ is the decision vector consisting of $x_i$ with size $n = 15$ in our example, $e$ is an $n-$vector of ones, $\Bar{r}$ is the $n-$vector of expected returns of stocks, and $Q$ is the $n \times n$ covariance matrix $(Q_{ij} = \sigma_{ij})$.
 
 \newpage
