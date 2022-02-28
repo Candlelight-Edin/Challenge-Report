@@ -16,11 +16,13 @@ Besides we did not invest more than $15\%$ of the capital in one single stock. C
 Assume that there are no taxes and transaction costs involved. So our model is as follows:
 $$
 \begin{array}{cl}
-\min & \Bar{r}^{T} x - x^{T} Q x \\
+\min & x^{T} Q x - \Bar{r}^{T} x \\
 \text {subject to} & e^{T} x \leq 300,000 \\
 & 0 \leq x_i \leq 45,000 
 \end{array}
 $$
-where $x$ is the decision vector consisting of $x_i$ with size $n = 15$ in our example, $e$ is an $n-$vector of ones, $\Bar{r}$ is the $n-$vector of expected returns of stocks, and $Q$ is the $n \times n$ covariance matrix $(Q_{ij} = \sigma_{ij})$.
+where $x$ is the decision vector consisting of $x_i$ with size $n = 15$ in our example, $e$ is an $n-$vector of ones, $\Bar{r}$ is the $n-$vector of expected returns of stocks, and $Q$ is the $n \times n$ covariance matrix $(Q_{ij} = \sigma_{ij})$ if we want to minimise the risk with more client's wealth. The first term $x^{T} Q x$ is designed for minimising the risk and the second term $\Bar{r}^{T} x$ means the total stock returns, where minimise the term $-\Bar{r}^{T} x$ is equivalent to maximise the stock returns.
+\\ \hspace*{\fill} \\
+The limitations of our model are the assumptions that there are no taxes and transaction costs involved in the investment which is not in the case of reality. Another limitation is that we only use the variance to approximate the risk. However we may need to consider multiple methods to evaluate the risk. 
 
 \newpage

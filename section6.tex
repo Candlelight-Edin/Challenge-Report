@@ -5,21 +5,27 @@
 
 Here we introduce our optimal plan if we buy $15$ stocks. We visualise our choice below showing each percentage of every stock.
 
+\begin{center}
 \begin{figure}[htp]
-    \includegraphics[width=15cm]{./optimal.png}
+    \includegraphics[width=15cm]{./Figures/optimal.png}
     \caption{The Optimal Portfolio Combination}
     \label{optimal}
 \end{figure}
+\end{center}
 
 \hspace*{\fill}\\
-Based on our model, we see that in this situation we will receive $1.2\%$ of stock returns with the risk $0.138781605\%$. Subsequently we shall show our target asset allocation in this situation.
+Under the model constraint of buying each stock no more than 15\%, our optimal plan of the portfolio invest mostly in 5 sectors: Communication Services, Consumer Defensive, Consumer Cyclical, Utilities and Healthcare. This ensures that we spread out the risk of the investment by investing in the sectors that are less correlated to each other.
+\\\hspace*{\fill}\\
+We do not invest in the sector "Financial Service", since by computing the average stock return rate, the two stocks we chose in this sector show that their average returns are negative: the Lloyds Bank has a negative return rate of $-62.9\%$, while the Barclays is of $-22.8\%$.
+\\\hspace*{\fill}\\
+
+Based on our model, we see that in this situation we will receive $1.2\%$ of stock returns with the risk $0.138781605\%$. Subsequently we shall show our target asset allocation in this situation. The following table illustrates our selection on the portfolio combinations, consisting of 15 stocks.
 
 \begin{center}
 \begin{tabular}{ |p{4cm}|p{1.5cm}|p{2.5cm}|p{2.5cm}|  }
 \hline
-\multicolumn{4}{|c|}{Stock Information} \\
-
-\hline
+%\multicolumn{4}{|c|}{The Information of the Portfolio Combinations} \\
+%\hline
 Company Name& Stock index & Sector type & Asset Allocation\\
 \hline
 Lloyds Banking Group plc & LLOY.L & Financial Services & $0\% (0 \textit{\pounds} )$ \\
@@ -30,7 +36,7 @@ Vodafone Group Public Limited Company & VOD.L & Communication Services & $4.121\
 \hline
 RELX PLC & REL.L & Communication Services & $15\% (45000 \textit{\pounds})$ \\
 \hline
-Tesco PLC & TSCO.L & Consumer Defensive & $8.906\% (26718 \textit{\pounds})$ \\
+Tesco PLC & TSCO.L & Consumer Defensive & $0.463\% (1389 \textit{\pounds})$ \\
 \hline
 British American Tobacco p.l.c. & BATS.L & Consumer Defensive & $13.927\% (41781 \textit{\pounds})$ \\
 \hline
